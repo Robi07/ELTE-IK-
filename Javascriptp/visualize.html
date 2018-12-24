@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<!-- 3rd party stylesheets -->
+	<link rel="stylesheet" type="text/css" href="lib/joint.css" />
+	<!-- stylesheets -->
+	<link rel="stylesheet" type="text/css" href="main.css" />
+	<!-- 3rd party libraries -->
+	<script src="lib/jquery.min.js"></script>
+	<script src="lib/lodash.min.js"></script>
+	<script src="lib/backbone-min.js"></script>
+	<script src="lib/joint.js"></script>
+	<script src="lib/svg-pan-zoom.min.js"></script>
+
+	<!-- global variables -->
+	<script src="globals.js"></script>
+
+	<!-- visualizer libraries -->
+	<script src="visualizer/utils.js"></script>
+	<script src="visualizer/fonts.js"></script>
+	<script src="visualizer/selector.js"></script>
+	<script src="visualizer/shapes.js"></script>
+	<script src="visualizer/attributeassociationview.js"></script>
+	<script src="visualizer/nodeholders.js"></script>
+	<script src="visualizer/linkholders.js"></script>
+	<script src="visualizer/visualizers.js"></script>
+	<script src="pollingRefresh.js"></script>
+	
+	<script>
+	$("document").ready(function(){
+		$( '#instance-selector').on('change', function(e){
+			let txt = $( "#instance-selector option:selected" ).text();
+			console.log(txt);
+		});
+
+	
+	});
+	</script>
+</head>
+<body>
+	<input type="checkbox" class="toggle-checkbox" id="toggle-diagram-selector-checkbox" checked>
+	<div id="diagram-selector">
+	<!-- selector link holder -->
+	<table id="selector-container">
+		<thead>
+				<tr>
+					<th colspan="2">Visualized diagrams</th>
+				</tr>
+				<tr>
+					<th>Class</th>
+					<th>State machine</th>
+				</tr>
+		</thead>
+		<tbody id="selector"></tbody>
+	
+ <select id="instance-selector">
+ <option value="1">Sima - @obj1</option>
+<option value="2">Zöldséges - @obj2</option>
+<option value="3">Szalamis - @obj3</option>
+ <option value="4">Kukoricás - @obj4</option>
+<option value="5">Paradicsomos - @obj5</option>
+ <option value="6">Szalonás - @obj6</option>
+<option value="7">Rákos - @obj7</option>
+ <option value="8">Magyaros - @obj8</option>
+<option value="9">Mexikói - @obj9</option>
+ <option value="10">Négy évszak - @obj10</option>
+<option value="11">Piedone - @obj11</option>
+ <option value="12">Ristorante - @obj12</option>
+ <option value="12">Vegetáriánus - @obj13</option>
+</select>
+
+</table>
+
+
+
+
+
+
+
+	</div>
+	<label for="toggle-diagram-selector-checkbox" id="diagram-selector-label" class="button control label">Toggle diagram list</label>
+
+
+
+
+	<!-- diagram holder -->
+	<div class="content">
+		<div id="paper"></div>
+
+		<!-- input -->
+		<script src="input.js"></script>
+
+		<!-- visualizing script -->
+		<script src="visualizer.js"></script>
+
+		<!-- animation -->
+		<script src="animation.js"></script>
+
+		<!-- resize selector label -->
+		<script>
+			$("#diagram-selector-label").width($("#diagram-selector").innerWidth());
+		</script>
+		
+		<!-- add debug information toggle -->
+		<input type="checkbox" class="toggle-checkbox" id="toggle-debug-container-checkbox" checked>
+		<div id="debug-toggle-container">
+			<div style="display: flex; flex-direction: column">
+				<div style="flex: 0 0">
+					<label class="debug-label" for="toggle-debug">Poll server for diagnostics information</label>
+					<input type="checkbox" class="toggle-checkbox" id="toggle-debug-checkbox" checked>
+					<label for="toggle-debug-checkbox" class="button switch" id="toggle-debug">
+						<div class="switch-left switch-content" id="toggle-debug-on">On</div>
+						<div class="switch-right switch-content" id="toggle-debug-off">Off</div>
+						<div class="switch-border"></div>
+					</label>
+				</div>
+				<div style="flex: 0 0">
+					<label class="debug-label" for="debugPort">Diagnostics port</label>
+					<input type="number" name="debugPort" id="debug-port-input">
+				</div>
+			
+        </div>
+			<label id="debug-port-error" class="debug-label">Could not connect to server. Please make sure an execution is
+				in progress through a txtUML configuration and that the specified port is correct.</label>
+		</div>
+		<label id="debug-toggle-label" for="toggle-debug-container-checkbox" class="button control label">Diagnostics</label>
+
+		<!-- debug functionality -->
+		<script src="pollingRefresh.js"></script>
+
+		<!-- add pan and zoom -->
+		<input type="checkbox" class="toggle-checkbox" id="toggle-control-checkbox" checked>
+		<div id="pan-and-zoom-control-container">
+			<div id="zoom-control-container">
+				<div class="button control" id="zoom-in">+</div>
+				<div class="button control" id="zoom-out">-</div>
+			</div>
+			<div class="button control" id="reset-view">Reset view</div>
+			<input type="checkbox" class="toggle-checkbox" id="toggle-pan-checkbox" checked>
+			<label for="toggle-pan-checkbox" class="button switch" id="toggle-pan">
+				<div class="switch-left switch-content">Edit</div>
+				<div class="switch-right switch-content">Pan</div>
+				<div class="switch-border"></div>
+			</label>
+			<input type="checkbox" class="toggle-checkbox" id="toggle-wheel-zoom-checkbox" checked>
+			<label for="toggle-wheel-zoom-checkbox" class="button control toggle" id="toggle-wheel-zoom">Wheel zoom</label>
+		</div>
+
+		<label id="pan-and-zoom-toggle-label" for="toggle-control-checkbox" class="button control label">Toggle controls</label>
+		<!-- resize control label -->
+		<script>
+			$("#pan-and-zoom-toggle-label").width($("#pan-and-zoom-control-container").innerHeight());
+		</script>
+		<script src="panAndZoom.js"></script>
+	</div>
+
+	<div class="footer">
+		The source and licensing details of the 3rd party libraries used by this page can be found at their respective websites:
+		<div class="middle-container">
+		<ul>
+			<li class="button"><a href="http://jointjs.com/opensource">JointJS</a></li>
+			<li class="button"><a href="https://jquery.com/">jQuery</a></li>
+			<li class="button"><a href="https://lodash.com/">Lodash</a></li>
+			<li class="button"><a href="http://backbonejs.org">Backbone.js</a></li>
+			<li class="button"><a href="https://github.com/ariutta/svg-pan-zoom">svg-pan-zoom</a></li>
+		</ul>
+		</div>
+	</div>
+
+
+ 
+
+</body>
+</html>

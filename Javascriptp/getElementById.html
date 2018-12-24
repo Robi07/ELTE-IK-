@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Do a global search, and test for "Szalamis" and "Sajtos" in a string:</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+
+<script>
+function myFunction() {
+
+
+    var str = "Szalamis!";
+    var str2 ="Mexikoi";
+
+    //look for "Mexikoi"
+    var patt = /Mexikoi/g;
+    var result = patt.exec(str2);
+    
+ //look for "Szalonna"
+    var patt = /Szalonna/g;
+    var result = patt.exec(str2);
+    
+
+    //look for "Sajtos"
+    var patt2 = /Sajtos/g;
+    result2 = patt2.exec(str2);
+    document.getElementById("demo1").innerHTML = result + "<br>" + result2;
+    
+
+
+ //look for "Zoldseges"
+    var patt3 = /Zoldseges/g;
+    result3 = patt2.exec(str2);
+
+document.getElementById("demo2").innerHTML = result + "<br>" + result3;
+	
+	}
+</script>
+
+</body>
+</html>
+
+
+
+
