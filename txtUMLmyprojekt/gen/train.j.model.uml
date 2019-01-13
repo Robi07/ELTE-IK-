@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:standard="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_ikcggP-UEeiwSbhc6iSr3A" name="Train">
+    <packageImport xmi:id="_iqtgkP-UEeiwSbhc6iSr3A">
+      <importedPackage xmi:type="uml:Model" href="pathmap://TXTUML_STDLIB/stdlib.uml#_DE5UMHLCEeWVx4ZuxFlarQ"/>
+    </packageImport>
+    <packageImport xmi:id="_ivpD4P-UEeiwSbhc6iSr3A">
+      <importedPackage xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_jEBYcP-UEeiwSbhc6iSr3A" name="associations">
+      <packagedElement xmi:type="uml:Association" xmi:id="_jEM-oP-UEeiwSbhc6iSr3A" name="GL" memberEnd="_jEQB8P-UEeiwSbhc6iSr3A _jEZy8P-UEeiwSbhc6iSr3A"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_jEvxMP-UEeiwSbhc6iSr3A" name="GM" memberEnd="_jEwYQP-UEeiwSbhc6iSr3A _jExmYP-UEeiwSbhc6iSr3A"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_jE7-cP-UEeiwSbhc6iSr3A" name="CUST" memberEnd="_jE7-cf-UEeiwSbhc6iSr3A _jE9MkP-UEeiwSbhc6iSr3A"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_i-ZRkP-UEeiwSbhc6iSr3A" name="PizzaCassa" classifierBehavior="_i_SCYP-UEeiwSbhc6iSr3A">
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_i_SCYP-UEeiwSbhc6iSr3A" name="PizzaCassa">
+        <region xmi:id="_i_Xh8P-UEeiwSbhc6iSr3A" name="PizzaCassa">
+          <subvertex xmi:type="uml:State" xmi:id="_i_mLcP-UEeiwSbhc6iSr3A" name="Open"/>
+          <subvertex xmi:type="uml:State" xmi:id="_i_nZkP-UEeiwSbhc6iSr3A" name="Close"/>
+        </region>
+      </ownedBehavior>
+      <ownedOperation xmi:id="_i-fYMP-UEeiwSbhc6iSr3A" name="PizzaCassa"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_i_3RMP-UEeiwSbhc6iSr3A" name="CloseDoor" classifierBehavior="_i_7ioP-UEeiwSbhc6iSr3A">
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_i_7ioP-UEeiwSbhc6iSr3A" name="CloseDoor">
+        <region xmi:id="_i_7iof-UEeiwSbhc6iSr3A" name="CloseDoor">
+          <transition xmi:id="_jAPEoP-UEeiwSbhc6iSr3A" name="Init_Close" source="_jABpQP-UEeiwSbhc6iSr3A" target="_jAEFgP-UEeiwSbhc6iSr3A"/>
+          <transition xmi:id="_jASvAP-UEeiwSbhc6iSr3A" name="Close_Light" source="_jAEFgP-UEeiwSbhc6iSr3A" target="_jAEFgP-UEeiwSbhc6iSr3A">
+            <trigger xmi:id="_jAY1oP-UEeiwSbhc6iSr3A" name="null_trigger" event="_jGHqMf-UEeiwSbhc6iSr3A"/>
+          </transition>
+          <transition xmi:id="_jAaq0P-UEeiwSbhc6iSr3A" name="Open_Close" source="_jAEFgP-UEeiwSbhc6iSr3A" target="_jADecP-UEeiwSbhc6iSr3A">
+            <trigger xmi:id="_jAbR4P-UEeiwSbhc6iSr3A" name="null_trigger" event="_jGHqMf-UEeiwSbhc6iSr3A"/>
+          </transition>
+          <transition xmi:id="_jAb48P-UEeiwSbhc6iSr3A" name="Open_Close2" source="_jAEFgP-UEeiwSbhc6iSr3A" target="_jADecP-UEeiwSbhc6iSr3A">
+            <trigger xmi:id="_jAdHEP-UEeiwSbhc6iSr3A" name="null_trigger" event="_jGhS0f-UEeiwSbhc6iSr3A"/>
+          </transition>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_jABpQP-UEeiwSbhc6iSr3A" name="Init"/>
+          <subvertex xmi:type="uml:State" xmi:id="_jADecP-UEeiwSbhc6iSr3A" name="Open"/>
+          <subvertex xmi:type="uml:State" xmi:id="_jAEFgP-UEeiwSbhc6iSr3A" name="Close"/>
+        </region>
+      </ownedBehavior>
+      <ownedOperation xmi:id="_i_4fUP-UEeiwSbhc6iSr3A" name="CloseDoor"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_jA2vsP-UEeiwSbhc6iSr3A" name="Customer" classifierBehavior="_jA5zAP-UEeiwSbhc6iSr3A">
+      <ownedAttribute xmi:id="_jEZy8P-UEeiwSbhc6iSr3A" name="l" type="_jBtrUP-UEeiwSbhc6iSr3A" association="_jEM-oP-UEeiwSbhc6iSr3A">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jEZy8f-UEeiwSbhc6iSr3A" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jEZy8v-UEeiwSbhc6iSr3A" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_jE9MkP-UEeiwSbhc6iSr3A" name="e" type="_jBMt8P-UEeiwSbhc6iSr3A" association="_jE7-cP-UEeiwSbhc6iSr3A">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jE9Mkf-UEeiwSbhc6iSr3A" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jE9zoP-UEeiwSbhc6iSr3A" value="1"/>
+      </ownedAttribute>
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_jA5zAP-UEeiwSbhc6iSr3A" name="Customer">
+        <region xmi:id="_jA5zAf-UEeiwSbhc6iSr3A" name="Customer">
+          <transition xmi:id="_jA8PQP-UEeiwSbhc6iSr3A" name="Init_Dark" source="_jA6aEP-UEeiwSbhc6iSr3A" target="_jA6aEf-UEeiwSbhc6iSr3A"/>
+          <transition xmi:id="_jA82UP-UEeiwSbhc6iSr3A" name="Dark_Light" source="_jA6aEf-UEeiwSbhc6iSr3A" target="_jA7oMP-UEeiwSbhc6iSr3A">
+            <trigger xmi:id="_jA9dYP-UEeiwSbhc6iSr3A" name="null_trigger" event="_jGHqMf-UEeiwSbhc6iSr3A"/>
+          </transition>
+          <transition xmi:id="_jA-EcP-UEeiwSbhc6iSr3A" name="Light_Dark" source="_jA7oMP-UEeiwSbhc6iSr3A" target="_jA6aEf-UEeiwSbhc6iSr3A">
+            <trigger xmi:id="_jA_SkP-UEeiwSbhc6iSr3A" name="null_trigger" event="_jGHqMf-UEeiwSbhc6iSr3A"/>
+          </transition>
+          <transition xmi:id="_jA_Skf-UEeiwSbhc6iSr3A" name="Light_Dark2" source="_jA7oMP-UEeiwSbhc6iSr3A" target="_jA6aEf-UEeiwSbhc6iSr3A">
+            <trigger xmi:id="_jBAgsP-UEeiwSbhc6iSr3A" name="null_trigger" event="_jGhS0f-UEeiwSbhc6iSr3A"/>
+          </transition>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_jA6aEP-UEeiwSbhc6iSr3A" name="Init"/>
+          <subvertex xmi:type="uml:State" xmi:id="_jA6aEf-UEeiwSbhc6iSr3A" name="Dark"/>
+          <subvertex xmi:type="uml:State" xmi:id="_jA7oMP-UEeiwSbhc6iSr3A" name="Light"/>
+        </region>
+      </ownedBehavior>
+      <ownedOperation xmi:id="_jA2vsf-UEeiwSbhc6iSr3A" name="Customer"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_jBMt8P-UEeiwSbhc6iSr3A" name="Order" classifierBehavior="_jBPxQP-UEeiwSbhc6iSr3A">
+      <ownedAttribute xmi:id="_jEwYQP-UEeiwSbhc6iSr3A" name="g" type="_jBtrUP-UEeiwSbhc6iSr3A" association="_jEvxMP-UEeiwSbhc6iSr3A">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jEw_UP-UEeiwSbhc6iSr3A" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jEw_Uf-UEeiwSbhc6iSr3A" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_jE7-cf-UEeiwSbhc6iSr3A" name="g" type="_jA2vsP-UEeiwSbhc6iSr3A" association="_jE7-cP-UEeiwSbhc6iSr3A">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jE8lgP-UEeiwSbhc6iSr3A" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jE8lgf-UEeiwSbhc6iSr3A" value="1"/>
+      </ownedAttribute>
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_jBPxQP-UEeiwSbhc6iSr3A" name="Order">
+        <region xmi:id="_jBPxQf-UEeiwSbhc6iSr3A" name="Order">
+          <transition xmi:id="_jBRmcP-UEeiwSbhc6iSr3A" name="Init_OpenDoor" target="_jBPxQv-UEeiwSbhc6iSr3A"/>
+          <transition xmi:id="_jBSNgP-UEeiwSbhc6iSr3A" name="Order_Light" source="_jBQYUP-UEeiwSbhc6iSr3A" target="_jBQ_Yf-UEeiwSbhc6iSr3A">
+            <trigger xmi:id="_jBTboP-UEeiwSbhc6iSr3A" name="null_trigger" event="_jGHqMf-UEeiwSbhc6iSr3A"/>
+          </transition>
+          <transition xmi:id="_jBclkP-UEeiwSbhc6iSr3A" name="Light_Dark" source="_jBQ_YP-UEeiwSbhc6iSr3A" target="_jBQ_YP-UEeiwSbhc6iSr3A">
+            <trigger xmi:id="_jBdMoP-UEeiwSbhc6iSr3A" name="null_trigger" event="_jGHqMf-UEeiwSbhc6iSr3A"/>
+          </transition>
+          <transition xmi:id="_jBdzsP-UEeiwSbhc6iSr3A" name="Light_Dark2" source="_jBQ_Yf-UEeiwSbhc6iSr3A" target="_jBQ_Yv-UEeiwSbhc6iSr3A">
+            <trigger xmi:id="_jBeawP-UEeiwSbhc6iSr3A" name="null_trigger" event="_jGhS0f-UEeiwSbhc6iSr3A"/>
+          </transition>
+          <subvertex xmi:type="uml:State" xmi:id="_jBPxQv-UEeiwSbhc6iSr3A" name="OpenDoor"/>
+          <subvertex xmi:type="uml:State" xmi:id="_jBQYUP-UEeiwSbhc6iSr3A" name="Waiting"/>
+          <subvertex xmi:type="uml:State" xmi:id="_jBQ_YP-UEeiwSbhc6iSr3A" name="Fizet_Rendel2"/>
+          <subvertex xmi:type="uml:State" xmi:id="_jBQ_Yf-UEeiwSbhc6iSr3A" name="Eating_Food"/>
+          <subvertex xmi:type="uml:State" xmi:id="_jBQ_Yv-UEeiwSbhc6iSr3A" name="Left_Restaurant"/>
+        </region>
+      </ownedBehavior>
+      <ownedOperation xmi:id="_jBNVAP-UEeiwSbhc6iSr3A" name="Order"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_jBtrUP-UEeiwSbhc6iSr3A" name="Pizza" classifierBehavior="_jBx8wP-UEeiwSbhc6iSr3A">
+      <ownedAttribute xmi:id="_jEQB8P-UEeiwSbhc6iSr3A" name="g" type="_jA2vsP-UEeiwSbhc6iSr3A" association="_jEM-oP-UEeiwSbhc6iSr3A">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jETsUP-UEeiwSbhc6iSr3A" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jEU6cP-UEeiwSbhc6iSr3A" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_jExmYP-UEeiwSbhc6iSr3A" name="h" type="_jBMt8P-UEeiwSbhc6iSr3A" association="_jEvxMP-UEeiwSbhc6iSr3A">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jExmYf-UEeiwSbhc6iSr3A" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jEyNcP-UEeiwSbhc6iSr3A" value="1"/>
+      </ownedAttribute>
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_jBx8wP-UEeiwSbhc6iSr3A" name="Pizza">
+        <region xmi:id="_jBx8wf-UEeiwSbhc6iSr3A" name="Pizza">
+          <transition xmi:id="_jBzx8P-UEeiwSbhc6iSr3A" name="Init_Nyers" source="_jByj0P-UEeiwSbhc6iSr3A" target="_jByj0f-UEeiwSbhc6iSr3A"/>
+          <transition xmi:id="_jB0ZAP-UEeiwSbhc6iSr3A" name="Nyers_Light" source="_jByj0f-UEeiwSbhc6iSr3A" target="_jByj0f-UEeiwSbhc6iSr3A">
+            <trigger xmi:id="_jB21QP-UEeiwSbhc6iSr3A" name="null_trigger" event="_jGHqMf-UEeiwSbhc6iSr3A"/>
+          </transition>
+          <transition xmi:id="_jB5RgP-UEeiwSbhc6iSr3A" name="Light_Dark" source="_jByj0f-UEeiwSbhc6iSr3A" target="_jBzK4P-UEeiwSbhc6iSr3A">
+            <trigger xmi:id="_jB6foP-UEeiwSbhc6iSr3A" name="null_trigger" event="_jGHqMf-UEeiwSbhc6iSr3A"/>
+          </transition>
+          <transition xmi:id="_jB7GsP-UEeiwSbhc6iSr3A" name="Light_Dark2" source="_jBzK4P-UEeiwSbhc6iSr3A" target="_jByj0f-UEeiwSbhc6iSr3A">
+            <trigger xmi:id="_jB_YIP-UEeiwSbhc6iSr3A" name="null_trigger" event="_jGhS0f-UEeiwSbhc6iSr3A"/>
+          </transition>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_jByj0P-UEeiwSbhc6iSr3A" name="Init"/>
+          <subvertex xmi:type="uml:State" xmi:id="_jByj0f-UEeiwSbhc6iSr3A" name="Nyers"/>
+          <subvertex xmi:type="uml:State" xmi:id="_jBzK4P-UEeiwSbhc6iSr3A" name="Sult"/>
+        </region>
+      </ownedBehavior>
+      <ownedOperation xmi:id="_jBuSYP-UEeiwSbhc6iSr3A" name="Pizza"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_jCJJIP-UEeiwSbhc6iSr3A" name="PizzaPay" classifierBehavior="_jCS6IP-UEeiwSbhc6iSr3A">
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_jCS6IP-UEeiwSbhc6iSr3A" name="PizzaPay">
+        <region xmi:id="_jCThMP-UEeiwSbhc6iSr3A" name="PizzaPay">
+          <transition xmi:id="_jCVWYP-UEeiwSbhc6iSr3A" name="Init_KP" source="_jCUIQP-UEeiwSbhc6iSr3A" target="_jCUIQf-UEeiwSbhc6iSr3A"/>
+          <transition xmi:id="_jCV9cP-UEeiwSbhc6iSr3A" name="KP_Light" source="_jCUIQf-UEeiwSbhc6iSr3A" target="_jCUIQf-UEeiwSbhc6iSr3A">
+            <trigger xmi:id="_jCWkgP-UEeiwSbhc6iSr3A" name="null_trigger" event="_jGHqMf-UEeiwSbhc6iSr3A"/>
+          </transition>
+          <transition xmi:id="_jCXLkP-UEeiwSbhc6iSr3A" name="Light_Bankcard" source="_jCUIQf-UEeiwSbhc6iSr3A" target="_jCUvUP-UEeiwSbhc6iSr3A">
+            <trigger xmi:id="_jCXyoP-UEeiwSbhc6iSr3A" name="null_trigger" event="_jGHqMf-UEeiwSbhc6iSr3A"/>
+          </transition>
+          <transition xmi:id="_jCYZsP-UEeiwSbhc6iSr3A" name="Light_Bankcard1" source="_jCUvUP-UEeiwSbhc6iSr3A" target="_jCUIQf-UEeiwSbhc6iSr3A">
+            <trigger xmi:id="_jCZAwP-UEeiwSbhc6iSr3A" name="null_trigger" event="_jGhS0f-UEeiwSbhc6iSr3A"/>
+          </transition>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_jCUIQP-UEeiwSbhc6iSr3A" name="Init"/>
+          <subvertex xmi:type="uml:State" xmi:id="_jCUIQf-UEeiwSbhc6iSr3A" name="KP"/>
+          <subvertex xmi:type="uml:State" xmi:id="_jCUvUP-UEeiwSbhc6iSr3A" name="Bankcard"/>
+        </region>
+      </ownedBehavior>
+      <ownedOperation xmi:id="_jCK-UP-UEeiwSbhc6iSr3A" name="PizzaPay"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_jCl1EP-UEeiwSbhc6iSr3A" name="OpenDoor" classifierBehavior="_jC3h4P-UEeiwSbhc6iSr3A">
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_jC3h4P-UEeiwSbhc6iSr3A" name="OpenDoor">
+        <region xmi:id="_jC3h4f-UEeiwSbhc6iSr3A" name="OpenDoor">
+          <transition xmi:id="_jC5-IP-UEeiwSbhc6iSr3A" name="Init_Close" source="_jC4I8P-UEeiwSbhc6iSr3A" target="_jC5XEP-UEeiwSbhc6iSr3A"/>
+          <transition xmi:id="_jC7zUP-UEeiwSbhc6iSr3A" name="Close_Light" source="_jC5XEP-UEeiwSbhc6iSr3A" target="_jC4wAP-UEeiwSbhc6iSr3A">
+            <trigger xmi:id="_jC8aYP-UEeiwSbhc6iSr3A" name="null_trigger" event="_jGHqMf-UEeiwSbhc6iSr3A"/>
+          </transition>
+          <transition xmi:id="_jC9ogP-UEeiwSbhc6iSr3A" name="Light_Dark" source="_jC5XEP-UEeiwSbhc6iSr3A" target="_jC4wAP-UEeiwSbhc6iSr3A">
+            <trigger xmi:id="_jDAr0P-UEeiwSbhc6iSr3A" name="null_trigger" event="_jGHqMf-UEeiwSbhc6iSr3A"/>
+          </transition>
+          <transition xmi:id="_jDBS4P-UEeiwSbhc6iSr3A" name="Light_Open2" source="_jC5XEP-UEeiwSbhc6iSr3A" target="_jC4wAP-UEeiwSbhc6iSr3A">
+            <trigger xmi:id="_jDDvIP-UEeiwSbhc6iSr3A" name="null_trigger" event="_jGhS0f-UEeiwSbhc6iSr3A"/>
+          </transition>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_jC4I8P-UEeiwSbhc6iSr3A" name="Init"/>
+          <subvertex xmi:type="uml:State" xmi:id="_jC4wAP-UEeiwSbhc6iSr3A" name="Open"/>
+          <subvertex xmi:type="uml:State" xmi:id="_jC5XEP-UEeiwSbhc6iSr3A" name="Close"/>
+        </region>
+      </ownedBehavior>
+      <ownedOperation xmi:id="_jCmcIP-UEeiwSbhc6iSr3A" name="OpenDoor"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_jDgbEP-UEeiwSbhc6iSr3A" name="Pizzatype" classifierBehavior="_jDvEkP-UEeiwSbhc6iSr3A">
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_jDvEkP-UEeiwSbhc6iSr3A" name="Pizzatype">
+        <region xmi:id="_jDvEkf-UEeiwSbhc6iSr3A" name="Pizzatype">
+          <transition xmi:id="_jD1LMf-UEeiwSbhc6iSr3A" name="Init_Nyers" source="_jDvroP-UEeiwSbhc6iSr3A" target="_jDvrof-UEeiwSbhc6iSr3A"/>
+          <transition xmi:id="_jD2ZUP-UEeiwSbhc6iSr3A" name="Szalamis_Light" source="_jDvrof-UEeiwSbhc6iSr3A" target="_jDwSsP-UEeiwSbhc6iSr3A">
+            <trigger xmi:id="_jD4OgP-UEeiwSbhc6iSr3A" name="null_trigger" event="_jGHqMf-UEeiwSbhc6iSr3A"/>
+          </transition>
+          <transition xmi:id="_jD41kP-UEeiwSbhc6iSr3A" name="Sajtos1" source="_jDvrof-UEeiwSbhc6iSr3A" target="_jDxg0P-UEeiwSbhc6iSr3A">
+            <trigger xmi:id="_jD5coP-UEeiwSbhc6iSr3A" name="null_trigger" event="_jGHqMf-UEeiwSbhc6iSr3A"/>
+          </transition>
+          <transition xmi:id="_jD6DsP-UEeiwSbhc6iSr3A" name="Light_Dark2" source="_jDvrof-UEeiwSbhc6iSr3A" target="_jDxg0f-UEeiwSbhc6iSr3A">
+            <trigger xmi:id="_jD6qwP-UEeiwSbhc6iSr3A" name="null_trigger" event="_jGhS0f-UEeiwSbhc6iSr3A"/>
+          </transition>
+          <transition xmi:id="_jD6qwf-UEeiwSbhc6iSr3A" name="Zoldseges1" source="_jDvrof-UEeiwSbhc6iSr3A" target="_jDyH4P-UEeiwSbhc6iSr3A">
+            <trigger xmi:id="_jD7R0P-UEeiwSbhc6iSr3A" name="null_trigger" event="_jGhS0f-UEeiwSbhc6iSr3A"/>
+          </transition>
+          <transition xmi:id="_jD744P-UEeiwSbhc6iSr3A" name="Gombas1" source="_jDvrof-UEeiwSbhc6iSr3A" target="_jD0kIP-UEeiwSbhc6iSr3A">
+            <trigger xmi:id="_jD8f8P-UEeiwSbhc6iSr3A" name="null_trigger" event="_jGhS0f-UEeiwSbhc6iSr3A"/>
+          </transition>
+          <transition xmi:id="_jD9HAP-UEeiwSbhc6iSr3A" name="Sonkas_Sajtos1" source="_jDvrof-UEeiwSbhc6iSr3A" target="_jD1LMP-UEeiwSbhc6iSr3A">
+            <trigger xmi:id="_jD9uEP-UEeiwSbhc6iSr3A" name="null_trigger" event="_jGhS0f-UEeiwSbhc6iSr3A"/>
+          </transition>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_jDvroP-UEeiwSbhc6iSr3A" name="Init"/>
+          <subvertex xmi:type="uml:State" xmi:id="_jDvrof-UEeiwSbhc6iSr3A" name="Nyers"/>
+          <subvertex xmi:type="uml:State" xmi:id="_jDwSsP-UEeiwSbhc6iSr3A" name="Szalamis"/>
+          <subvertex xmi:type="uml:State" xmi:id="_jDxg0P-UEeiwSbhc6iSr3A" name="Sajtos"/>
+          <subvertex xmi:type="uml:State" xmi:id="_jDxg0f-UEeiwSbhc6iSr3A" name="Husos"/>
+          <subvertex xmi:type="uml:State" xmi:id="_jDyH4P-UEeiwSbhc6iSr3A" name="Zoldseges"/>
+          <subvertex xmi:type="uml:State" xmi:id="_jD0kIP-UEeiwSbhc6iSr3A" name="Gombas"/>
+          <subvertex xmi:type="uml:State" xmi:id="_jD1LMP-UEeiwSbhc6iSr3A" name="Sonkas_sajtos"/>
+        </region>
+      </ownedBehavior>
+      <ownedOperation xmi:id="_jDi3UP-UEeiwSbhc6iSr3A" name="Pizzatype"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_jE9zof-UEeiwSbhc6iSr3A" name="signals">
+      <packagedElement xmi:type="uml:Signal" xmi:id="_jFFvcP-UEeiwSbhc6iSr3A" name="Pizza"/>
+      <packagedElement xmi:type="uml:SignalEvent" xmi:id="_jFHkoP-UEeiwSbhc6iSr3A" name="Pizza" signal="_jFFvcP-UEeiwSbhc6iSr3A"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jFIywP-UEeiwSbhc6iSr3A" name="#Pizza_factory">
+        <ownedBehavior xmi:type="uml:Activity" xmi:id="_jFWOIP-UEeiwSbhc6iSr3A" name="Pizza" specification="_jFMdIP-UEeiwSbhc6iSr3A"/>
+        <ownedOperation xmi:id="_jFMdIP-UEeiwSbhc6iSr3A" name="Pizza" isStatic="true" method="_jFWOIP-UEeiwSbhc6iSr3A">
+          <ownedParameter xmi:id="_jFNrQP-UEeiwSbhc6iSr3A" name="signal" type="_jFFvcP-UEeiwSbhc6iSr3A"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Signal" xmi:id="_jFZRcP-UEeiwSbhc6iSr3A" name="CloseDoor"/>
+      <packagedElement xmi:type="uml:SignalEvent" xmi:id="_jFZRcf-UEeiwSbhc6iSr3A" name="CloseDoor" signal="_jFZRcP-UEeiwSbhc6iSr3A"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jFZ4gP-UEeiwSbhc6iSr3A" name="#CloseDoor_factory">
+        <ownedBehavior xmi:type="uml:Activity" xmi:id="_jFbtsP-UEeiwSbhc6iSr3A" name="CloseDoor" specification="_jFZ4gf-UEeiwSbhc6iSr3A"/>
+        <ownedOperation xmi:id="_jFZ4gf-UEeiwSbhc6iSr3A" name="CloseDoor" isStatic="true" method="_jFbtsP-UEeiwSbhc6iSr3A">
+          <ownedParameter xmi:id="_jFbGoP-UEeiwSbhc6iSr3A" name="signal" type="_jFZRcP-UEeiwSbhc6iSr3A"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Signal" xmi:id="_jFeJ8P-UEeiwSbhc6iSr3A" name="Customer"/>
+      <packagedElement xmi:type="uml:SignalEvent" xmi:id="_jFeJ8f-UEeiwSbhc6iSr3A" name="Customer" signal="_jFeJ8P-UEeiwSbhc6iSr3A"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jFexAP-UEeiwSbhc6iSr3A" name="#Customer_factory">
+        <ownedBehavior xmi:type="uml:Activity" xmi:id="_jFjCcf-UEeiwSbhc6iSr3A" name="Customer" specification="_jFexAf-UEeiwSbhc6iSr3A"/>
+        <ownedOperation xmi:id="_jFexAf-UEeiwSbhc6iSr3A" name="Customer" isStatic="true" method="_jFjCcf-UEeiwSbhc6iSr3A">
+          <ownedParameter xmi:id="_jFjCcP-UEeiwSbhc6iSr3A" name="signal" type="_jFeJ8P-UEeiwSbhc6iSr3A"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Signal" xmi:id="_jFmFwP-UEeiwSbhc6iSr3A" name="Sajtos"/>
+      <packagedElement xmi:type="uml:SignalEvent" xmi:id="_jFmFwf-UEeiwSbhc6iSr3A" name="Sajtos" signal="_jFmFwP-UEeiwSbhc6iSr3A"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jFms0P-UEeiwSbhc6iSr3A" name="#Sajtos_factory">
+        <ownedBehavior xmi:type="uml:Activity" xmi:id="_jFn68f-UEeiwSbhc6iSr3A" name="Sajtos" specification="_jFms0f-UEeiwSbhc6iSr3A"/>
+        <ownedOperation xmi:id="_jFms0f-UEeiwSbhc6iSr3A" name="Sajtos" isStatic="true" method="_jFn68f-UEeiwSbhc6iSr3A">
+          <ownedParameter xmi:id="_jFn68P-UEeiwSbhc6iSr3A" name="signal" type="_jFmFwP-UEeiwSbhc6iSr3A"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Signal" xmi:id="_jFszcP-UEeiwSbhc6iSr3A" name="OpenDoor"/>
+      <packagedElement xmi:type="uml:SignalEvent" xmi:id="_jFtagP-UEeiwSbhc6iSr3A" name="OpenDoor" signal="_jFszcP-UEeiwSbhc6iSr3A"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jFtagf-UEeiwSbhc6iSr3A" name="#OpenDoor_factory">
+        <ownedBehavior xmi:type="uml:Activity" xmi:id="_jFvPsf-UEeiwSbhc6iSr3A" name="OpenDoor" specification="_jFuBkP-UEeiwSbhc6iSr3A"/>
+        <ownedOperation xmi:id="_jFuBkP-UEeiwSbhc6iSr3A" name="OpenDoor" isStatic="true" method="_jFvPsf-UEeiwSbhc6iSr3A">
+          <ownedParameter xmi:id="_jFvPsP-UEeiwSbhc6iSr3A" name="signal" type="_jFszcP-UEeiwSbhc6iSr3A"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Signal" xmi:id="_jF7c8P-UEeiwSbhc6iSr3A" name="Eating_food"/>
+      <packagedElement xmi:type="uml:SignalEvent" xmi:id="_jF8rEP-UEeiwSbhc6iSr3A" name="Eating_food" signal="_jF7c8P-UEeiwSbhc6iSr3A"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jF8rEf-UEeiwSbhc6iSr3A" name="#Eating_food_factory">
+        <ownedBehavior xmi:type="uml:Activity" xmi:id="_jF-gQf-UEeiwSbhc6iSr3A" name="Eating_food" specification="_jF9SIP-UEeiwSbhc6iSr3A"/>
+        <ownedOperation xmi:id="_jF9SIP-UEeiwSbhc6iSr3A" name="Eating_food" isStatic="true" method="_jF-gQf-UEeiwSbhc6iSr3A">
+          <ownedParameter xmi:id="_jF-gQP-UEeiwSbhc6iSr3A" name="signal" type="_jF7c8P-UEeiwSbhc6iSr3A"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Signal" xmi:id="_jGBjkP-UEeiwSbhc6iSr3A" name="Forward"/>
+      <packagedElement xmi:type="uml:SignalEvent" xmi:id="_jGBjkf-UEeiwSbhc6iSr3A" name="Forward" signal="_jGBjkP-UEeiwSbhc6iSr3A"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jGBjkv-UEeiwSbhc6iSr3A" name="#Forward_factory">
+        <ownedBehavior xmi:type="uml:Activity" xmi:id="_jGD_0f-UEeiwSbhc6iSr3A" name="Forward" specification="_jGCKoP-UEeiwSbhc6iSr3A"/>
+        <ownedOperation xmi:id="_jGCKoP-UEeiwSbhc6iSr3A" name="Forward" isStatic="true" method="_jGD_0f-UEeiwSbhc6iSr3A">
+          <ownedParameter xmi:id="_jGD_0P-UEeiwSbhc6iSr3A" name="signal" type="_jGBjkP-UEeiwSbhc6iSr3A"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Signal" xmi:id="_jGHqMP-UEeiwSbhc6iSr3A" name="SwitchLight"/>
+      <packagedElement xmi:type="uml:SignalEvent" xmi:id="_jGHqMf-UEeiwSbhc6iSr3A" name="SwitchLight" signal="_jGHqMP-UEeiwSbhc6iSr3A"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jGIRQP-UEeiwSbhc6iSr3A" name="#SwitchLight_factory">
+        <ownedBehavior xmi:type="uml:Activity" xmi:id="_jGLUkf-UEeiwSbhc6iSr3A" name="SwitchLight" specification="_jGJfYP-UEeiwSbhc6iSr3A"/>
+        <ownedOperation xmi:id="_jGJfYP-UEeiwSbhc6iSr3A" name="SwitchLight" isStatic="true" method="_jGLUkf-UEeiwSbhc6iSr3A">
+          <ownedParameter xmi:id="_jGLUkP-UEeiwSbhc6iSr3A" name="signal" type="_jGHqMP-UEeiwSbhc6iSr3A"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Signal" xmi:id="_jGO-8P-UEeiwSbhc6iSr3A" name="Backward"/>
+      <packagedElement xmi:type="uml:SignalEvent" xmi:id="_jGPmAP-UEeiwSbhc6iSr3A" name="Backward" signal="_jGO-8P-UEeiwSbhc6iSr3A"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jGQNEP-UEeiwSbhc6iSr3A" name="#Backward_factory">
+        <ownedBehavior xmi:type="uml:Activity" xmi:id="_jGSCQf-UEeiwSbhc6iSr3A" name="Backward" specification="_jGQNEf-UEeiwSbhc6iSr3A"/>
+        <ownedOperation xmi:id="_jGQNEf-UEeiwSbhc6iSr3A" name="Backward" isStatic="true" method="_jGSCQf-UEeiwSbhc6iSr3A">
+          <ownedParameter xmi:id="_jGSCQP-UEeiwSbhc6iSr3A" name="signal" type="_jGO-8P-UEeiwSbhc6iSr3A"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Signal" xmi:id="_jGVFkP-UEeiwSbhc6iSr3A" name="Order"/>
+      <packagedElement xmi:type="uml:SignalEvent" xmi:id="_jGalIP-UEeiwSbhc6iSr3A" name="Order" signal="_jGVFkP-UEeiwSbhc6iSr3A"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jGalIf-UEeiwSbhc6iSr3A" name="#Order_factory">
+        <ownedBehavior xmi:type="uml:Activity" xmi:id="_jGePgP-UEeiwSbhc6iSr3A" name="Order" specification="_jGbMMP-UEeiwSbhc6iSr3A"/>
+        <ownedOperation xmi:id="_jGbMMP-UEeiwSbhc6iSr3A" name="Order" isStatic="true" method="_jGePgP-UEeiwSbhc6iSr3A">
+          <ownedParameter xmi:id="_jGdocP-UEeiwSbhc6iSr3A" name="signal" type="_jGVFkP-UEeiwSbhc6iSr3A"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Signal" xmi:id="_jGhS0P-UEeiwSbhc6iSr3A" name="LightOff"/>
+      <packagedElement xmi:type="uml:SignalEvent" xmi:id="_jGhS0f-UEeiwSbhc6iSr3A" name="LightOff" signal="_jGhS0P-UEeiwSbhc6iSr3A"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jGhS0v-UEeiwSbhc6iSr3A" name="#LightOff_factory">
+        <ownedBehavior xmi:type="uml:Activity" xmi:id="_jGkWIP-UEeiwSbhc6iSr3A" name="LightOff" specification="_jGig8P-UEeiwSbhc6iSr3A"/>
+        <ownedOperation xmi:id="_jGig8P-UEeiwSbhc6iSr3A" name="LightOff" isStatic="true" method="_jGkWIP-UEeiwSbhc6iSr3A">
+          <ownedParameter xmi:id="_jGjvEP-UEeiwSbhc6iSr3A" name="signal" type="_jGhS0P-UEeiwSbhc6iSr3A"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Signal" xmi:id="_jGmyYP-UEeiwSbhc6iSr3A" name="GetMenu"/>
+      <packagedElement xmi:type="uml:SignalEvent" xmi:id="_jGmyYf-UEeiwSbhc6iSr3A" name="GetMenu" signal="_jGmyYP-UEeiwSbhc6iSr3A"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jGnZcP-UEeiwSbhc6iSr3A" name="#GetMenu_factory">
+        <ownedBehavior xmi:type="uml:Activity" xmi:id="_jGpOof-UEeiwSbhc6iSr3A" name="GetMenu" specification="_jGnZcf-UEeiwSbhc6iSr3A"/>
+        <ownedOperation xmi:id="_jGnZcf-UEeiwSbhc6iSr3A" name="GetMenu" isStatic="true" method="_jGpOof-UEeiwSbhc6iSr3A">
+          <ownedParameter xmi:id="_jGpOoP-UEeiwSbhc6iSr3A" name="signal" type="_jGmyYP-UEeiwSbhc6iSr3A"/>
+        </ownedOperation>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:id="_ivtVUP-UEeiwSbhc6iSr3A">
+      <eAnnotations xmi:id="_ivzb8P-UEeiwSbhc6iSr3A" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+  </uml:Model>
+  <standard:Create xmi:id="_i_EnAP-UEeiwSbhc6iSr3A" base_BehavioralFeature="_i-fYMP-UEeiwSbhc6iSr3A"/>
+  <standard:Create xmi:id="_i_5tcP-UEeiwSbhc6iSr3A" base_BehavioralFeature="_i_4fUP-UEeiwSbhc6iSr3A"/>
+  <standard:Create xmi:id="_jA3WwP-UEeiwSbhc6iSr3A" base_BehavioralFeature="_jA2vsf-UEeiwSbhc6iSr3A"/>
+  <standard:Create xmi:id="_jBNVAf-UEeiwSbhc6iSr3A" base_BehavioralFeature="_jBNVAP-UEeiwSbhc6iSr3A"/>
+  <standard:Create xmi:id="_jBu5cP-UEeiwSbhc6iSr3A" base_BehavioralFeature="_jBuSYP-UEeiwSbhc6iSr3A"/>
+  <standard:Create xmi:id="_jCRE8P-UEeiwSbhc6iSr3A" base_BehavioralFeature="_jCK-UP-UEeiwSbhc6iSr3A"/>
+  <standard:Create xmi:id="_jC1ssP-UEeiwSbhc6iSr3A" base_BehavioralFeature="_jCmcIP-UEeiwSbhc6iSr3A"/>
+  <standard:Create xmi:id="_jDjeYP-UEeiwSbhc6iSr3A" base_BehavioralFeature="_jDi3UP-UEeiwSbhc6iSr3A"/>
+  <standard:Create xmi:id="_jFNEMP-UEeiwSbhc6iSr3A" base_BehavioralFeature="_jFMdIP-UEeiwSbhc6iSr3A"/>
+  <standard:Create xmi:id="_jFafkP-UEeiwSbhc6iSr3A" base_BehavioralFeature="_jFZ4gf-UEeiwSbhc6iSr3A"/>
+  <standard:Create xmi:id="_jFfYEP-UEeiwSbhc6iSr3A" base_BehavioralFeature="_jFexAf-UEeiwSbhc6iSr3A"/>
+  <standard:Create xmi:id="_jFnT4P-UEeiwSbhc6iSr3A" base_BehavioralFeature="_jFms0f-UEeiwSbhc6iSr3A"/>
+  <standard:Create xmi:id="_jFuBkf-UEeiwSbhc6iSr3A" base_BehavioralFeature="_jFuBkP-UEeiwSbhc6iSr3A"/>
+  <standard:Create xmi:id="_jF9SIf-UEeiwSbhc6iSr3A" base_BehavioralFeature="_jF9SIP-UEeiwSbhc6iSr3A"/>
+  <standard:Create xmi:id="_jGCKof-UEeiwSbhc6iSr3A" base_BehavioralFeature="_jGCKoP-UEeiwSbhc6iSr3A"/>
+  <standard:Create xmi:id="_jGKGcP-UEeiwSbhc6iSr3A" base_BehavioralFeature="_jGJfYP-UEeiwSbhc6iSr3A"/>
+  <standard:Create xmi:id="_jGQ0IP-UEeiwSbhc6iSr3A" base_BehavioralFeature="_jGQNEf-UEeiwSbhc6iSr3A"/>
+  <standard:Create xmi:id="_jGbMMf-UEeiwSbhc6iSr3A" base_BehavioralFeature="_jGbMMP-UEeiwSbhc6iSr3A"/>
+  <standard:Create xmi:id="_jGjIAP-UEeiwSbhc6iSr3A" base_BehavioralFeature="_jGig8P-UEeiwSbhc6iSr3A"/>
+  <standard:Create xmi:id="_jGoAgP-UEeiwSbhc6iSr3A" base_BehavioralFeature="_jGnZcf-UEeiwSbhc6iSr3A"/>
+</xmi:XMI>
